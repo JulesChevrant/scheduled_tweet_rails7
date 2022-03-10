@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   get "about", to: "about#index"
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create" # A same URL (/sign_up) can handle multiple types of requests (verbs)
+
+  get "sign_in", to: "sessions#new"
+  post "sign_in", to: "sessions#create"
+
   delete "logout", to: "sessions#destroy"
 
 
